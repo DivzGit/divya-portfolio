@@ -1,0 +1,21 @@
+{
+  "name": "divya-portfolio",
+  "version": "1.0.0",
+  "description": "Modern interactive portfolio for Divya - Software Engineer",
+  "main": "server.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd backend && npm start",
+    "client": "cd frontend && npm start",
+    "build": "cd frontend && npm run build",
+    "install-deps": "npm install && cd frontend && npm install && cd ../backend && npm install",
+    "start": "cd backend && npm start",
+    "heroku-postbuild": "npm run install-deps && npm run build"
+  },
+  "keywords": ["portfolio", "react", "nodejs", "mongodb", "3d", "particles"],
+  "author": "Divya",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

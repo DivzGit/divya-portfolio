@@ -1,0 +1,69 @@
+.threejs-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  pointer-events: none;
+  opacity: 0.3;
+  overflow: hidden;
+}
+
+.threejs-container.interactive {
+  pointer-events: all;
+  z-index: 1;
+}
+
+.performance-mode-indicator {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(0, 245, 255, 0.1);
+  border: 1px solid rgba(0, 245, 255, 0.3);
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  color: var(--neon-cyan);
+  font-size: 0.8rem;
+  font-weight: 600;
+  backdrop-filter: blur(10px);
+  z-index: 10;
+  pointer-events: all;
+}
+
+.performance-mode-indicator span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.threejs-container canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+@media (max-width: 768px) {
+  .threejs-container {
+    opacity: 0.2;
+  }
+}
+
+@media (max-width: 480px) {
+  .threejs-container {
+    opacity: 0.1;
+  }
+  
+  .performance-mode-indicator {
+    top: 10px;
+    right: 10px;
+    font-size: 0.7rem;
+    padding: 0.3rem 0.8rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .threejs-container {
+    display: none;
+  }
+}

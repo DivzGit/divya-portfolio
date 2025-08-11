@@ -1,0 +1,53 @@
+.laptop-test-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.laptop-test-container h2 {
+  color: #00f5ff;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.laptop-test-wrapper {
+  width: 400px;
+  height: 350px;
+  margin-bottom: 2rem;
+  border-radius: 20px;
+  background: rgba(10, 10, 10, 0.5);
+  border: 1px solid rgba(0, 245, 255, 0.3);
+  padding: 20px;
+}
+
+.test-info {
+  max-width: 600px;
+  text-align: center;
+}
+
+.test-info h3 {
+  color: #ff0080;
+  margin-bottom: 1rem;
+}
+
+.test-info ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 0.5rem;
+}
+
+.test-info li {
+  color: #e1e1e1;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border: 1px solid rgba(0, 245, 255, 0.2);
+}

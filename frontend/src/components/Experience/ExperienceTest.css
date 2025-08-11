@@ -1,0 +1,112 @@
+.experience-test-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  color: white;
+}
+
+.test-header {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(0, 245, 255, 0.1);
+  border-bottom: 1px solid rgba(0, 245, 255, 0.3);
+}
+
+.test-header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--neon-cyan) 0%, var(--neon-pink) 50%, var(--neon-purple) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+}
+
+.test-header p {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.test-content {
+  /* The enhanced experience component will be rendered here */
+}
+
+.test-features {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.test-features h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--neon-cyan);
+  margin-bottom: 3rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.feature-card {
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 245, 255, 0.2);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  border-color: var(--neon-cyan);
+  box-shadow: 0 10px 30px rgba(0, 245, 255, 0.2);
+  transform: translateY(-5px);
+}
+
+.feature-card h3 {
+  color: var(--neon-pink);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.feature-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.feature-card li {
+  position: relative;
+  padding-left: 1.5rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.feature-card li::before {
+  content: '▶';
+  position: absolute;
+  left: 0;
+  color: var(--neon-cyan);
+  font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  .test-header h1 {
+    font-size: 2rem;
+  }
+  
+  .test-header p {
+    font-size: 1rem;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .test-features {
+    padding: 2rem 1rem;
+  }
+}
